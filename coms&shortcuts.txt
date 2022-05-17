@@ -1,0 +1,4 @@
+vscode plugin name : ES7+ React/Redux/React-Native snippets
+
+rfc - to create fucntional component
+rconst - to create constructor
