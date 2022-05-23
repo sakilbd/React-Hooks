@@ -16,6 +16,8 @@ import ClickCounter from "./higherOrderComponents/ClickCounter";
 import HoverCounter from "./higherOrderComponents/HoverCounter";
 import ComponentC from "./context/ComponentC";
 import { UserProvider } from "./context/userContext";
+import PostList from "./httpRequest/PostList";
+import PostForm from "./httpRequest/PostForm";
 
 function App() {
   return (
@@ -41,9 +43,13 @@ function App() {
 
       {/* <ClickCounter/>
     <HoverCounter/> */}
-      <UserProvider value="Sakil">
+      {/* <UserProvider value="Sakil">
         <ComponentC />
-      </UserProvider>
+      </UserProvider> */}
+
+
+      {/* <PostList/> */}
+      <PostForm/>
     </div>
   );
 }
