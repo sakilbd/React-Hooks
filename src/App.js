@@ -18,6 +18,8 @@ import ComponentC from "./context/ComponentC";
 import { UserProvider } from "./context/userContext";
 import PostList from "./httpRequest/PostList";
 import PostForm from "./httpRequest/PostForm";
+import ClassCounter from "./useStateHook/ClassCounter";
+import HookCounter from "./useStateHook/HookCounter";
 
 function App() {
   return (
@@ -32,7 +34,6 @@ function App() {
       {/* <FocusInput/> */}
       {/* <FRParentInput/> */}
       {/* <PortalDemo/> */}
-
       {/* error boundary */}
       {/* <ErrorBoundary>
         <Hero heroName="Batman" />
@@ -40,16 +41,18 @@ function App() {
         <Hero heroName="Joker" />
       </ErrorBoundary> */}
       {/* error boundary */}
-
       {/* <ClickCounter/>
     <HoverCounter/> */}
       {/* <UserProvider value="Sakil">
         <ComponentC />
       </UserProvider> */}
-
-
       {/* <PostList/> */}
-      <PostForm/>
+      {/* <PostForm/> */}
+
+
+      {/* Hooks */}
+      {/* <ClassCounter/> */}
+      <HookCounter/>
     </div>
   );
 }
