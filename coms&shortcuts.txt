@@ -1,8 +1,14 @@
 vscode plugin name : ES7+ React/Redux/React-Native snippets
 
+
+
+
+
 rfc - to create fucntional component
 rce - to create class component
 rfce - to create functional componenet
 rpce - to create a pure componenet
 
 rconst - to create constructor
+
+npm install axios  // http library
