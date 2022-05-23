@@ -7,6 +7,9 @@ import Table from './fragments/Table';
 import PureComp from './pureComponents/PureComp';
 import ParentComp from './pureComponents/ParentComp';
 import RefsDemo from './refs/RefsDemo';
+import FocusInput from './refs/FocusInput';
+import FRParentInput from './refs/FRParentInput';
+import PortalDemo from './portals/PortalDemo';
 
 
 function App() {
@@ -18,7 +21,10 @@ function App() {
      {/* <Table></Table> */}
      {/* <PureComp></PureComp> */}
      {/* <ParentComp></ParentComp> */}
-     <RefsDemo></RefsDemo>
+     {/* <RefsDemo></RefsDemo> */}
+     {/* <FocusInput/> */}
+     {/* <FRParentInput/> */}
+     <PortalDemo/>
 
     </div>
   );
