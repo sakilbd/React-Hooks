@@ -22,6 +22,7 @@ import ClassCounter from "./useStateHook/ClassCounter";
 import HookCounter from "./useStateHook/HookCounter";
 import HookCounterTwo from "./useStateHook/HookCounterTwo";
 import HookCounterObject from "./useStateHook/HookCounterObject";
+import HookCounterArray from "./useStateHook/HookCounterArray";
 
 function App() {
   return (
@@ -56,7 +57,8 @@ function App() {
       {/* <ClassCounter/> */}
       {/* <HookCounter/> */}
       {/* <HookCounterTwo/> */}
-      <HookCounterObject/>
+      {/* <HookCounterObject/> */}
+      <HookCounterArray/>
     </div>
   );
 }
