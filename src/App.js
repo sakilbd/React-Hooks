@@ -20,6 +20,8 @@ import PostList from "./httpRequest/PostList";
 import PostForm from "./httpRequest/PostForm";
 import ClassCounter from "./useStateHook/ClassCounter";
 import HookCounter from "./useStateHook/HookCounter";
+import HookCounterTwo from "./useStateHook/HookCounterTwo";
+import HookCounterObject from "./useStateHook/HookCounterObject";
 
 function App() {
   return (
@@ -52,7 +54,9 @@ function App() {
 
       {/* Hooks */}
       {/* <ClassCounter/> */}
-      <HookCounter/>
+      {/* <HookCounter/> */}
+      {/* <HookCounterTwo/> */}
+      <HookCounterObject/>
     </div>
   );
 }
