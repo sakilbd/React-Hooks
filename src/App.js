@@ -23,6 +23,10 @@ import HookCounter from "./useStateHook/HookCounter";
 import HookCounterTwo from "./useStateHook/HookCounterTwo";
 import HookCounterObject from "./useStateHook/HookCounterObject";
 import HookCounterArray from "./useStateHook/HookCounterArray";
+import ClassCounterOne from "./useEffect/ClassCounterOne";
+import HookCounterOne from "./useEffect/HookCounterOne";
+import HookMouse from "./useEffect/HookMouse";
+import MouseContainer from "./useEffect/MouseContainer";
 
 function App() {
   return (
@@ -58,7 +62,15 @@ function App() {
       {/* <HookCounter/> */}
       {/* <HookCounterTwo/> */}
       {/* <HookCounterObject/> */}
-      <HookCounterArray/>
+      {/* <HookCounterArray/> */}
+
+
+      {/* <HookCounter/> */}
+      {/* <HookCounterOne/> */}
+      {/* <ClassCounterOne/> */}
+
+      {/* <HookMouse/> */}
+      <MouseContainer/>
     </div>
   );
 }
