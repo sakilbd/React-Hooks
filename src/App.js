@@ -31,6 +31,7 @@ import IntervalHookCounter from "./useEffect/IntervalHookCounter";
 import DataFetching from "./useEffect/dataFetching/DataFetching";
 import ComponentD from "./useContextHook/ComponentD";
 import React from 'react';
+import CounterOne from "./useReducer/CounterOne";
 
 export const SakilContext = React.createContext()
 export const ChannelContext = React.createContext()
@@ -88,11 +89,13 @@ function App() {
 
 
        
-      <SakilContext.Provider value={'Sakil'}>
+      {/* <SakilContext.Provider value={'Sakil'}>
         <ChannelContext.Provider value={'Md Sakiluzzaman'}>
             <ComponentD/>
          </ChannelContext.Provider>
-      </SakilContext.Provider>
+      </SakilContext.Provider> */}
+
+      <CounterOne/>
       
     </div>
   );
