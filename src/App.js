@@ -15,7 +15,7 @@ import ErrorBoundary from "./errorBoundary/ErrorBoundary";
 import ClickCounter from "./higherOrderComponents/ClickCounter";
 import HoverCounter from "./higherOrderComponents/HoverCounter";
 import ComponentC from "./context/ComponentC";
-import { UserProvider } from "./context/userContext";
+import UserContext, { UserProvider } from "./context/userContext";
 import PostList from "./httpRequest/PostList";
 import PostForm from "./httpRequest/PostForm";
 import ClassCounter from "./useStateHook/ClassCounter";
@@ -28,8 +28,16 @@ import HookCounterOne from "./useEffect/HookCounterOne";
 import HookMouse from "./useEffect/HookMouse";
 import MouseContainer from "./useEffect/MouseContainer";
 import IntervalHookCounter from "./useEffect/IntervalHookCounter";
+import DataFetching from "./useEffect/dataFetching/DataFetching";
+import ComponentD from "./useContextHook/ComponentD";
+import React from 'react';
+
+export const SakilContext = React.createContext()
+export const ChannelContext = React.createContext()
+
 
 function App() {
+  
   return (
     <div className="App">
       {/* <Counter></Counter> */}
@@ -73,7 +81,19 @@ function App() {
       {/* <HookMouse/> */}
       {/* <MouseContainer/> */}
 
-      <IntervalHookCounter/>
+      {/* <IntervalHookCounter/> */}
+
+      {/* <DataFetching/> */}
+
+
+
+       
+      <SakilContext.Provider value={'Sakil'}>
+        <ChannelContext.Provider value={'Md Sakiluzzaman'}>
+            <ComponentD/>
+         </ChannelContext.Provider>
+      </SakilContext.Provider>
+      
     </div>
   );
 }
