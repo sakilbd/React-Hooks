@@ -32,6 +32,7 @@ import DataFetching from "./useEffect/dataFetching/DataFetching";
 import ComponentD from "./useContextHook/ComponentD";
 import React from 'react';
 import CounterOne from "./useReducer/CounterOne";
+import CounterTwo from "./useReducer/CounterTwo";
 
 export const SakilContext = React.createContext()
 export const ChannelContext = React.createContext()
@@ -95,7 +96,8 @@ function App() {
          </ChannelContext.Provider>
       </SakilContext.Provider> */}
 
-      <CounterOne/>
+      {/* <CounterOne/> */}
+      <CounterTwo/>
       
     </div>
   );
