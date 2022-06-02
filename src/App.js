@@ -30,76 +30,92 @@ import MouseContainer from "./useEffect/MouseContainer";
 import IntervalHookCounter from "./useEffect/IntervalHookCounter";
 import DataFetching from "./useEffect/dataFetching/DataFetching";
 import ComponentD from "./useContextHook/ComponentD";
-import React from 'react';
+import React, { useReducer } from "react";
 import CounterOne from "./useReducer/CounterOne";
 import CounterTwo from "./useReducer/CounterTwo";
+import CounterThree from "./useReducer/CounterThree";
+import ComponentX from "./useReducer/ReducerComponenets/ComponentX";
+import ComponentY from "./useReducer/ReducerComponenets/ComponentY";
+import ComponentZ from "./useReducer/ReducerComponenets/ComponentZ";
 
-export const SakilContext = React.createContext()
-export const ChannelContext = React.createContext()
+export const SakilContext = React.createContext();
+export const ChannelContext = React.createContext();
 
+export const CountContext = React.createContext();
+
+const initialState = 0;
+const reducer = (state, action) => {
+  switch (action) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    case "reset":
+      return initialState;
+    default:
+      return state;
+  }
+};
 
 function App() {
-  
+  const [count, dispatch] = useReducer(reducer, initialState);
   return (
-    <div className="App">
-      {/* <Counter></Counter> */}
-      {/* <LifecycleA></LifecycleA> */}
-      {/* <FragmentDemo></FragmentDemo> */}
-      {/* <Table></Table> */}
-      {/* <PureComp></PureComp> */}
-      {/* <ParentComp></ParentComp> */}
-      {/* <RefsDemo></RefsDemo> */}
-      {/* <FocusInput/> */}
-      {/* <FRParentInput/> */}
-      {/* <PortalDemo/> */}
-      {/* error boundary */}
-      {/* <ErrorBoundary>
+    <CountContext.Provider value={{ countState:count,countDispatch:dispatch }}>
+      <div className="App">
+        {/* <Counter></Counter> */}
+        {/* <LifecycleA></LifecycleA> */}
+        {/* <FragmentDemo></FragmentDemo> */}
+        {/* <Table></Table> */}
+        {/* <PureComp></PureComp> */}
+        {/* <ParentComp></ParentComp> */}
+        {/* <RefsDemo></RefsDemo> */}
+        {/* <FocusInput/> */}
+        {/* <FRParentInput/> */}
+        {/* <PortalDemo/> */}
+        {/* error boundary */}
+        {/* <ErrorBoundary>
         <Hero heroName="Batman" />
         <Hero heroName="Superman" />
         <Hero heroName="Joker" />
       </ErrorBoundary> */}
-      {/* error boundary */}
-      {/* <ClickCounter/>
+        {/* error boundary */}
+        {/* <ClickCounter/>
     <HoverCounter/> */}
-      {/* <UserProvider value="Sakil">
+        {/* <UserProvider value="Sakil">
         <ComponentC />
       </UserProvider> */}
-      {/* <PostList/> */}
-      {/* <PostForm/> */}
-
-
-      {/* Hooks */}
-      {/* <ClassCounter/> */}
-      {/* <HookCounter/> */}
-      {/* <HookCounterTwo/> */}
-      {/* <HookCounterObject/> */}
-      {/* <HookCounterArray/> */}
-
-
-      {/* <HookCounter/> */}
-      {/* <HookCounterOne/> */}
-      {/* <ClassCounterOne/> */}
-
-      {/* <HookMouse/> */}
-      {/* <MouseContainer/> */}
-
-      {/* <IntervalHookCounter/> */}
-
-      {/* <DataFetching/> */}
-
-
-
-       
-      {/* <SakilContext.Provider value={'Sakil'}>
+        {/* <PostList/> */}
+        {/* <PostForm/> */}
+        {/* Hooks */}
+        {/* <ClassCounter/> */}
+        {/* <HookCounter/> */}
+        {/* <HookCounterTwo/> */}
+        {/* <HookCounterObject/> */}
+        {/* <HookCounterArray/> */}
+        {/* <HookCounter/> */}
+        {/* <HookCounterOne/> */}
+        {/* <ClassCounterOne/> */}
+        {/* <HookMouse/> */}
+        {/* <MouseContainer/> */}
+        {/* <IntervalHookCounter/> */}
+        {/* <DataFetching/> */}
+        {/* <SakilContext.Provider value={'Sakil'}>
         <ChannelContext.Provider value={'Md Sakiluzzaman'}>
             <ComponentD/>
          </ChannelContext.Provider>
       </SakilContext.Provider> */}
+        {/* <CounterOne/> */}
+        {/* <CounterTwo/> */}
+        {/* <CounterThree/> */}
 
-      {/* <CounterOne/> */}
-      <CounterTwo/>
-      
-    </div>
+
+
+        Count - {count}
+        <ComponentX />
+        <ComponentY />
+        <ComponentZ />
+      </div>
+    </CountContext.Provider>
   );
 }
 
