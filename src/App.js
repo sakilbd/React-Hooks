@@ -37,6 +37,8 @@ import CounterThree from "./useReducer/CounterThree";
 import ComponentX from "./useReducer/ReducerComponenets/ComponentX";
 import ComponentY from "./useReducer/ReducerComponenets/ComponentY";
 import ComponentZ from "./useReducer/ReducerComponenets/ComponentZ";
+import DataFetchingOne from "./useReducer/DataFetching/DataFetchingOne";
+import DataFetchingTwo from "./useReducer/DataFetching/DataFetchingTwo";
 
 export const SakilContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -60,7 +62,7 @@ const reducer = (state, action) => {
 function App() {
   const [count, dispatch] = useReducer(reducer, initialState);
   return (
-    <CountContext.Provider value={{ countState:count,countDispatch:dispatch }}>
+    // <CountContext.Provider value={{ countState:count,countDispatch:dispatch }}>
       <div className="App">
         {/* <Counter></Counter> */}
         {/* <LifecycleA></LifecycleA> */}
@@ -110,12 +112,16 @@ function App() {
 
 
 
-        Count - {count}
+        {/* Count - {count}
         <ComponentX />
         <ComponentY />
-        <ComponentZ />
+        <ComponentZ /> */}
+
+
+        {/* <DataFetchingOne/> */}
+        <DataFetchingTwo/>
       </div>
-    </CountContext.Provider>
+    //</CountContext.Provider>
   );
 }
 
